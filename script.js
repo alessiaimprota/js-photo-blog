@@ -27,7 +27,7 @@ axios.get(endpoint)
          <div class="card bg-light position-relative">
           <img src="img/pin.svg" alt="pin" id="pin" class="position-absolute top-0 start-50 translate-middle">
           <img src="${url}" alt="travel-photo" />
-          <div class="photo-description">
+          <div class="photo-description pt-1">
           <h6 class="post-title">${title}</h6>
           <p>${date}</p>
           </div>
