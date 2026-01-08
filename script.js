@@ -16,9 +16,9 @@ axios.get(endpoint)
         let photosOutput = ""
 
         //cicliamo l'array
-        photos.forEach((photo,i) => {
+        photos.forEach(photo => {
             
-        //destruttiriamo e salviamo i singoli item degli obj
+        //destrutturiamo e salviamo i singoli item degli obj
         
             const { title, date, url} = photo;
 
