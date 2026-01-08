@@ -24,8 +24,8 @@ axios.get(endpoint)
 
         
         photosOutput += `
-        <div class=" single-card-container col-lg-4 col-md-6 col-12  g-5">
-         <div class="card bg-light position-relative">
+        <div class="col-lg-4 col-md-6 col-12  g-5 p-3">
+         <div class="card bg-light position-relative border-0">
           <img src="img/pin.svg" alt="pin" id="pin" class="position-absolute top-0 start-50 translate-middle">
           <img src="${url}" alt="travel-photo" />
           <div class="photo-description pt-1">
@@ -40,4 +40,5 @@ axios.get(endpoint)
         output.innerHTML=photosOutput;
     })
       .catch(error => {
+        console.log(error);
         output.innerHTML = "<p>Impossibile caricare le foto al momento.</p>";});
