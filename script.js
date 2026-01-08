@@ -22,6 +22,7 @@ axios.get(endpoint)
         
             const { title, date, url} = photo;
 
+        
         photosOutput += `
         <div class=" single-card-container col-lg-4 col-md-6 col-12  g-5">
          <div class="card bg-light position-relative">
