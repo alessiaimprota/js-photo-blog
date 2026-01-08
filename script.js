@@ -23,7 +23,7 @@ axios.get(endpoint)
             const { title, date, url} = photo;
 
         photosOutput += `
-        <div class="card col-lg-4 col-md-6 col-12 bg-primary">
+        <div class="card col-lg-4 col-md-6 col-12 bg-light gx-5">
           <img src="${url}" alt="travel-photo" />
           <div class="photo-description">
           <h6 class="post-title">${title}</h6>
