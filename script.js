@@ -38,3 +38,5 @@ axios.get(endpoint)
         
         output.innerHTML=photosOutput;
     })
+      .catch(error => {
+        output.innerHTML = "<p>Impossibile caricare le foto al momento.</p>";});
