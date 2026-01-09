@@ -4,6 +4,10 @@ const endpoint= "https://lanciweb.github.io/demo/api/pictures/"
 //console.log(endpoint)
 const output= document.getElementById("container")
 
+//aggiungo altre variabili per gestire l'apertura e la chiusura dell'overlay
+const overlay= document.getElementById("overlay")
+const btnOverlay=document.getElementById("btn-overlay")
+
 //faccio la chiamata all'endpoint
 axios.get(endpoint)
     .then(response => {
@@ -42,3 +46,8 @@ axios.get(endpoint)
       .catch(error => {
         console.log(error);
         output.innerHTML = "<p>Impossibile caricare le foto al momento.</p>";});
+
+
+        btnOverlay.addEventListener("click", ()=>{
+            overlay.style.display="none"
+        })
