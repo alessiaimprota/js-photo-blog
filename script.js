@@ -6,6 +6,7 @@ const output = document.getElementById("container");
 //aggiungo altre variabili per gestire l'apertura e la chiusura dell'overlay
 const overlay = document.getElementById("overlay");
 const btnOverlay = document.getElementById("btn-overlay");
+const imgOverlay = document.getElementById("img-overlay");
 
 //faccio la chiamata all'endpoint
 axios
@@ -24,6 +25,7 @@ axios
       //destrutturiamo e salviamo i singoli item degli obj
 
       const { title, date, url } = photo;
+        //console.log(date)
 
       photosOutput += `
         <div class="col-lg-4 col-md-6 col-12  g-5 p-3">
@@ -41,13 +43,22 @@ axios
           `;
     });
 
+
+    //console.log(photos)
     output.innerHTML = photosOutput;
     const btnCards = document.querySelectorAll(".btn-card");
+    //è un array di bottoni!!!
+    //console.log(btnCards)
 
-    btnCards.forEach((btnCard) => {
-      btnCard.addEventListener("click", () => {
+
+    //quindi associo col forEach l'url e l'indice e cambio la src .src
+    btnCards.forEach((btnCard,index) => {
+      btnCard.addEventListener("click", () => {    
+        const imageUrl = photos[index].url;
+        imgOverlay.src = imageUrl
         overlay.classList.remove("d-none");
         overlay.classList.add("d-block");
+    
       });
     });
     btnOverlay.addEventListener("click", () => {
