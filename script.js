@@ -47,8 +47,7 @@ axios
     //console.log(photos)
     output.innerHTML = photosOutput;
     const btnCards = document.querySelectorAll(".btn-card");
-    //è un array di bottoni!!!
-    //console.log(btnCards)
+    console.log(btnCards)
 
 
     //quindi associo col forEach l'url e l'indice e cambio la src .src
