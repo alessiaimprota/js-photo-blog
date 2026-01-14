@@ -38,6 +38,12 @@ main{
 
 .btn-card:hover{
     transform: rotate(25deg);
+    transition: 0.3s;
+
+}
+
+.btn-card:hover #pin{
+    display: none;
 }
 
 .card img{
